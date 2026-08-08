@@ -543,9 +543,8 @@ footer{
 /* ===== OVERVIEW ===== */
 .overview-grid{
   display:grid;
-  grid-template-columns:1.1fr 1fr;
-  gap:40px;
-  align-items:center;
+  grid-template-columns:1fr;
+  gap:24px;
 }
 .overview-video{
   border:1px solid var(--border);
@@ -562,22 +561,20 @@ footer{
 /* ===== SPLIT BLOCKS (Business Question / Features) ===== */
 .split-block{
   display:flex;
-  align-items:center;
-  gap:40px;
+  flex-direction:column;
+  gap:24px;
   margin-bottom:64px;
 }
 .split-block:last-child{margin-bottom:0;}
-.split-block.reverse{flex-direction:row-reverse;}
 .split-image{
-  flex:0 0 42%;
-  width:42%;
-  aspect-ratio:4/3;
+  width:100%;
+  aspect-ratio:16/9;
   border-radius:10px;
   border:1px solid var(--border);
   background:var(--surface);
   object-fit:cover;
 }
-.split-content{flex:1;min-width:0;}
+.split-content{width:100%;min-width:0;}
 .split-block h3{
   font-size:19px;
   margin-bottom:10px;
@@ -625,8 +622,3 @@ footer{
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width:800px){
-  .overview-grid{grid-template-columns:1fr;}
-  .split-block, .split-block.reverse{flex-direction:column;align-items:stretch;}
-  .split-image{width:100%;flex:none;}
-}
